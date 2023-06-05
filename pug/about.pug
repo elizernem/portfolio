@@ -4,7 +4,7 @@
         ul.text-center
             mixin item(href, src, text)
                 li 
-                    a.link-light.link-underline-opacity-0.d-flex(href=href style="gap: 10px;")
+                    a.link-light.link-underline-opacity-0.d-flex.text-decoration-none(href=href style="gap: 10px;")
                         img(src=src)
                         span= text 
             +item("http://t.me/nemzerli", 'img/icons/telegram.svg', 'nemzerli')
