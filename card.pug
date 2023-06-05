@@ -1,0 +1,21 @@
+include data.pug
+mixin article(data)
+    each name in data
+        article.col.mb-3
+            .card.text-dark.bg-light
+                a(href=name.link target="_blank" role="button")
+                    img.card-img-top(src=name.src alt=name.alt)
+                .card-body
+                    .card-title.h4= name.title
+                    .card-text.mb-0(style='height: 115px;')= name.text
+                    .mb-3.d-flex.justify-content-around
+                        each item in name.badges
+                            span.rounded-pill.badge(class=item.bg style='min-width: 34px;')= item.title
+                    .d-flex.flex-column(style="gap: 10px;")
+                        mixin button(text)
+                            a.btn.btn-dark(href=name.link target="_blank" role="button")
+                                small= text 
+                        +button('На сайт!')
+                        +button('В репозиторий!')
+
++article(data)

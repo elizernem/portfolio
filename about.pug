@@ -1,0 +1,12 @@
+.row.mb-3
+    .col.d-flex.flex-column.align-items-center
+        h3.text-light Контакты
+        ul.text-center
+            mixin item(href, src, text)
+                li 
+                    a.link-light.link-underline-opacity-0.d-flex(href=href style="gap: 10px;")
+                        img(src=src)
+                        span= text 
+            +item("http://t.me/nemzerli", 'img/icons/telegram.svg', 'nemzerli')
+            +item("mailto:zernemzer@gmail.com", "img/icons/google.svg", 'zernemzer@gmail.com')
+            +item('https://github.com/elizernem', 'img/icons/github.svg', 'github.com/elizernem')
