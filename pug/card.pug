@@ -12,10 +12,10 @@ mixin article(data)
                         each item in name.badges
                             span.rounded-pill.badge(class=item.bg style='min-width: 34px;')= item.title
                     .d-flex.flex-column(style="gap: 10px;")
-                        mixin button(text)
-                            a.btn.btn-dark(href=name.link target="_blank" role="button")
+                        mixin button(text, url)
+                            a.btn.btn-dark(href=url target="_blank" role="button")
                                 small= text 
-                        +button('На сайт!')
-                        +button('В репозиторий!')
+                        +button('На сайт!', name.link)
+                        +button('В репозиторий!', name.git)
 
 +article(data)
