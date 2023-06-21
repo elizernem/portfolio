@@ -7,11 +7,12 @@ mixin article(data)
                     img.card-img-top(src=name.src alt=name.alt)
                 .card-body
                     .card-title.h4= name.title
-                    .card-text.mb-0(style='min-height: 115px;')= name.text
-                    .mb-3.d-flex.justify-content-around
+                    .card-text.mb-0(style='min-height: 125px;')= name.text
+                    //- .mb-3.d-flex.justify-content-around(style='flex-wrap: wrap;')
+                    .row.justify-content-center(style='grid-gap: 5px;')
                         each item in name.badges
-                            span.rounded-pill.badge(class=item.bg style='min-width: 34px;')= item.title
-                    .d-flex.flex-column(style="gap: 10px;")
+                            span.col-4.rounded-pill.badge(class=item.bg style='min-width: 34px;')= item.title
+                    .d-flex.flex-column.mt-3(style="gap: 10px;")
                         mixin button(text, url)
                             a.btn.btn-dark(href=url target="_blank" role="button")
                                 small= text 
