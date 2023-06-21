@@ -7,7 +7,7 @@ mixin article(data)
                     img.card-img-top(src=name.src alt=name.alt)
                 .card-body
                     .card-title.h4= name.title
-                    .card-text.mb-0(style='height: 115px;')= name.text
+                    .card-text.mb-0(style='min-height: 115px;')= name.text
                     .mb-3.d-flex.justify-content-around
                         each item in name.badges
                             span.rounded-pill.badge(class=item.bg style='min-width: 34px;')= item.title
